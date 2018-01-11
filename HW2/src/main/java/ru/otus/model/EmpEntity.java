@@ -8,7 +8,6 @@ import java.util.Objects;
 @Table(name = "EMP")
 public class EmpEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
     private long empno;
     private String ename;
     private String job;
