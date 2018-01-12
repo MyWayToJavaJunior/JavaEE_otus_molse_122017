@@ -1,0 +1,10 @@
+Иванов Иван,ivan@gmail.com,true,ivan,Qwerty1,10000,Москва,Accounting,manager,ROLE_USER;ROLE_ACC
+Петров Петр,petr@gmail.com,true,petr,Qwerty2,15000,Москва,HR,operator,ROLE_USER;ROLE_HR
+Васильев Василий,vasya@gmail.com,true,vasya,Qwerty2,15000,Питер,IT,engineer,ROLE_USER
+Жаннова Жанна,janna@gmail.com,true,janna,Qwerty2,20000,Новгород,HR,manager,ROLE_USER;ROLE_HR
+Александр Александрович Александров,alex@gmail.com,true,alex,Qwerty2,57000,Москва,IT,operator,ROLE_USER,ROLE_HR,ROLE_DIRECTOR
+Тимур Тимурович,timur@gmail.com,true,timur,Qwerty2,25000,Москва,HR,operator,ROLE_USER
+Алыверды Кужману,aliverdy@gmail.com,true,aliverdy,Qwerty2,17000,Ашхабад,IT,operator,ROLE_USER
+Несмеянов Никогдан,nesmeyan@gmail.com,true,nesmeyan,Qwerty2,3000,Рязань,HR,operator,ROLE_USER
+Валера,valera@gmail.com,true,valera,Qwerty2,15000,Москва,HR,operator,ROLE_USER
+Наталья Ивановна Хочу,natali@gmail.com,true,natali,Qwerty6,55000,Москва,HR,operator,ROLE_USER

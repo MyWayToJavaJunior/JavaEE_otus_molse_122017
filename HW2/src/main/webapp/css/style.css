@@ -1,0 +1,47 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+.flex-container {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.caption {
+    width: 100%;
+    bottom: .3rem;
+    position: absolute;
+    background: #000;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+.caption h4 {
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.blockLabel {
+    display: block;
+}
+
+.error {
+    text-align: left;
+    background-color: red;
+    display: none;
+}
