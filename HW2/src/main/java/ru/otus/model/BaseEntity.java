@@ -6,19 +6,20 @@ import javax.persistence.MappedSuperclass;
 
 @MappedSuperclass
 public class BaseEntity {
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue
     private long id;
     private String name;
-
-    public long getId() {
-        return id;
-    }
 
     public BaseEntity() {
     }
 
     public BaseEntity(String name) {
         this.name = name;
+    }
+
+    public long getId() {
+        return id;
     }
 
     public void setId(long id) {
@@ -32,5 +33,4 @@ public class BaseEntity {
     public void setName(String name) {
         this.name = name;
     }
-
 }
