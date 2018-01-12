@@ -1,9 +1,9 @@
 package ru.otus.servlet;
 
 import ru.otus.util.LocalEntityManagerFactory;
-import ru.otus.model.Employee;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.StoredProcedureQuery;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,10 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
-@WebServlet("/listall")
-public class ListEmployee extends HttpServlet {
+@WebServlet("/max")
+public class MaxSalaryEmployee extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -23,10 +22,13 @@ public class ListEmployee extends HttpServlet {
         EntityManager em = LocalEntityManagerFactory.createEntityManager();
         try {
             em.getTransaction().begin();
-            Query q = em.createQuery("from Employee order by id desc");
-            List<Employee> result = q.getResultList();
+
+            StoredProcedureQuery storedProcedure = em.createStoredProcedureQuery("max_salary");
+            storedProcedure.execute();
+            String fio = (String) storedProcedure.getSingleResult();
+
             try (PrintWriter pw = response.getWriter()){
-                result.stream().forEach(pw::println);
+               pw.println(fio);
             }
             em.getTransaction().commit();
         } finally {
