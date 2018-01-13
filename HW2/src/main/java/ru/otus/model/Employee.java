@@ -5,7 +5,18 @@ import com.google.common.base.Objects;
 import javax.persistence.*;
 import java.util.List;
 
+
 @Entity
+@NamedEntityGraphs(
+        @NamedEntityGraph(
+                name = "employee",
+                attributeNodes = {
+                        @NamedAttributeNode("roles"),
+                        @NamedAttributeNode(value = "department"),
+                        @NamedAttributeNode(value = "city"),
+                        @NamedAttributeNode(value = "position")
+                }
+        ))
 @Table(name = "employee")
 public class Employee{
     @Id @GeneratedValue
