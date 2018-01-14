@@ -14,6 +14,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 @WebServlet("/listall")
 public class ListEmployee extends HttpServlet {
@@ -29,6 +30,10 @@ public class ListEmployee extends HttpServlet {
             EntityGraph graph1 = em.getEntityGraph("employee");
             q.setHint("javax.persistence.fetchgraph", graph1);
             List<Employee> result = q.getResultList();
+            result = result
+                    .stream()
+                    .distinct()
+                    .collect(Collectors.toList());
             try (PrintWriter pw = response.getWriter()){
                 result.stream().forEach(pw::println);
             }

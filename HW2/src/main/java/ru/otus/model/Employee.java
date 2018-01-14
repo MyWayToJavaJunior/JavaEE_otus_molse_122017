@@ -37,8 +37,7 @@ public class Employee{
     @ManyToOne
     private City city;
 
-    @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "employee")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "employee")
     private List<Role> roles;
 
     public Employee() {
