@@ -10,7 +10,7 @@ import javax.servlet.annotation.WebListener;
 @WebListener
 public class LocalEntityManagerFactory implements ServletContextListener {
 
-    public static final String PERSISTENCE_UNIT_NAME = "jpa";
+    public static final String PERSISTENCE_UNIT_NAME = "test";
     private static EntityManagerFactory emf;
     @Override
     public void contextInitialized(ServletContextEvent event) {
