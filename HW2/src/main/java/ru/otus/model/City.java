@@ -10,20 +10,6 @@ import java.util.List;
 @Table(name = "city")
 public class City extends BaseEntity{
 
-    @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "city")
-    private List<Employee> employees;
 
-    public City() {
-    }
-
-    public City(String name) {
-        super(name);
-    }
-
-    @Override
-    public String toString() {
-        return this.getName();
-    }
 
 }
