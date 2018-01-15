@@ -1,7 +1,6 @@
 package ru.otus.servlet;
 
 import ru.otus.model.City;
-import ru.otus.model.Employee;
 import ru.otus.util.LocalEntityManagerFactory;
 
 

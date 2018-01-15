@@ -1,15 +1,34 @@
 package ru.otus.model;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "city")
-public class City extends BaseEntity{
+@Table
+public class City {
 
+    @Id
+    @GeneratedValue
+    private long id;
 
+    private String name;
 
+    public City() {
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
