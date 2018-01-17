@@ -1,6 +1,7 @@
 package ru.otus.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAttribute;
 
 @MappedSuperclass
 public class BaseEntity {
@@ -16,6 +17,7 @@ public class BaseEntity {
         this.name = name;
     }
 
+    @XmlAttribute
     public long getId() {
         return id;
     }

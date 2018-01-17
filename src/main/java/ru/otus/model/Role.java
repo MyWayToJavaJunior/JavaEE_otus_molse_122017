@@ -1,6 +1,7 @@
 package ru.otus.model;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlTransient;
 
 @Entity
 @Table(name = "role")
@@ -10,6 +11,7 @@ public class Role extends BaseEntity{
         return employee;
     }
 
+    @XmlTransient
     public void setEmployee(Employee employee) {
         this.employee = employee;
     }

@@ -3,9 +3,13 @@ package ru.otus.model;
 import com.google.common.base.Objects;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.List;
 
-
+@XmlRootElement
 @Entity
 @NamedEntityGraphs(
         @NamedEntityGraph(
@@ -43,12 +47,14 @@ public class Employee{
     public Employee() {
     }
 
+    @XmlAttribute
     public long getId() {
         return id;
     }
     public void setId(long id) {
         this.id = id;
     }
+    @XmlAttribute
     public String getFio() {
         return fio;
     }
